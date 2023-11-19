@@ -1,0 +1,119 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+.section-about {
+  background-color: $bg-color;
+  padding: 25rem 0;
+  margin-top: -15vh;
+
+  @include respond(tab-port) {
+    padding: 20rem 0;
+    padding-bottom: 25rem;
+  }
+}
+
+.section-features {
+  padding: 20rem 0;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(#304352, 0.8),
+      rgba(#d7d2cc, 0.9)
+    ),
+    url("../img/danielle-cerullo-CQfNt66ttZM-unsplash-small.jpg");
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-resolution: 125em) {
+    background-image: linear-gradient(
+        to right,
+        rgba(#304352, 0.8),
+        rgba(#d7d2cc, 0.9)
+      ),
+      url("../img/danielle-cerullo-CQfNt66ttZM-unsplash.jpg");
+  }
+  background-size: cover;
+
+  transform: skewY(-5deg);
+  margin-top: -15rem;
+
+  & > * {
+    transform: skewY(5deg);
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.section-programs {
+  padding: 25rem 0 15rem 0;
+  background-color: $bg-color;
+  margin-top: -10rem;
+
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
+}
+
+.section-stories {
+  padding: 15rem 0;
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+  position: relative;
+}
+
+.section-join {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #304352 0%, #d7d2cc);
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.join {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 0%,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url("../img/join.jpg");
+
+  @include respond(tab-lan) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url("../img/join.jpg");
+    background-size: cover;
+  }
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url("../img/join.jpg");
+  }
+
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+
+    @include respond(tab-lan) {
+      width: 65%;
+    }
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}

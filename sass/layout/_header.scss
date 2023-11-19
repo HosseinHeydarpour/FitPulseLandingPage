@@ -1,0 +1,56 @@
+.header {
+  height: 90vh;
+  width: 100vw;
+  background-image: linear-gradient(
+      to right,
+      rgba(#304352, 0.8),
+      rgba(#d7d2cc, 0.9)
+    ),
+    url("../img/domino-164_6wVEHfI-unsplash-small.jpg");
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    (min-resolution: 125em) {
+    background-image: linear-gradient(
+        to right,
+        rgba(#304352, 0.8),
+        rgba(#d7d2cc, 0.9)
+      ),
+      url("../img/domino-164_6wVEHfI-unsplash.jpg");
+  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    font-family: "Italianno", cursive;
+    font-size: 9.6rem;
+    height: 12rem;
+    opacity: 70%;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+  }
+}
